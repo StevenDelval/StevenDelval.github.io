@@ -1,0 +1,24 @@
+.presentation{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    article{
+        width: 50%;
+        display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+    color: $couleur_deux;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 7px 7px 5px rgba(255, 0, 0, 0.4) ;
+    }
+    h2{
+        font-size: 36px;
+    }
+    p{
+        text-align: justify;
+       }
+}

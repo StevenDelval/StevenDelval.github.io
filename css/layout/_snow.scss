@@ -1,0 +1,16 @@
+.cloud{
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+.fa-snowflake{
+    color: $couleur_deux;
+    position: absolute;
+    top: -20px;
+    animation: fall linear forwards;
+}
+@keyframes fall {
+    to{
+        transform:translateY(102vh)
+    }
+}

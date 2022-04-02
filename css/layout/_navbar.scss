@@ -1,0 +1,89 @@
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 40px;
+        width: 40px;
+        height: 100vh;
+        #burger {
+            width: 30px;
+            height: 2px;
+            background: white;
+            display: inline-block;
+            position: relative;
+            left: 2px;
+        }
+
+        #burger::before,
+        #burger::after {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: white;
+            display: inline-block;
+            position: absolute;
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+
+        #burger::before {
+            top: -7px;
+        }
+
+        #burger::after {
+            top: 7px;
+        }
+
+        #burger.open {
+            background: transparent;
+            /* la barre du milieu disparait */
+        }
+
+        /* celles du haut et du bas s'inclinent pour former une croix */
+        #burger.open::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        #burger.open::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        ul{
+            display: flex;
+            flex-flow: column;
+            gap:100px;
+            transform: translateX(-500px);
+            transform-origin: center top;
+            transition: all 1s ease;
+            li{
+                color: $couleur_deux;
+                list-style: none;
+                font-size: 50px;
+            }
+            li:not(:hover){
+                text-shadow: 5px 5px 3px $couleur_trois;
+            }
+            li:hover{
+                transform: translate(5px,5px);
+                transition: all 0.3s ease;
+            }
+        }
+
+        ul.open {
+            transform: translate(0);
+            transition: all 1s ease ;
+        }
+    }
+
+    nav.open {
+        width: 300px;
+        z-index: 2;
+        #link{
+            align-self: flex-start;
+        }
+    }
