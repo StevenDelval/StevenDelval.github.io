@@ -14,11 +14,14 @@
     color: $couleur_deux;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 7px 7px 15px rgb(233 79 55 / 50%) ;
+    z-index: 3;
     }
     h2{
         font-size: 36px;
+        z-index: 3;
     }
     p{
         text-align: justify;
+        z-index: 3;
        }
 }
