@@ -1,6 +1,6 @@
 const cloud=document.querySelector('.cloud');
 let rest=document.getElementsByClassName('fa-snowflake');
-setInterval(snowfall,100)
+setInterval(snowfall,10)
 function snowfall(){
     const snowflake= document.createElement('i');
     snowflake.classList.add('fa-regular');
