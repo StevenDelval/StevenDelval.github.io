@@ -1,0 +1,61 @@
+.reseaux {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+    ul {
+        display: flex;
+        flex-flow: column;
+        gap: 15px;
+        li {
+            list-style: none;
+            height: 60px;
+            width: 150px;
+            border-radius: 15px 0 0 15px;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            
+
+            a {
+                display: flex;
+                text-decoration: none;
+                gap: 10px;
+                margin-left: 10px;
+
+                i {
+                    font-size: 46px;
+                }
+
+                .fa-github {
+                    color: white ;
+                }
+
+                .fa-linkedin-in {
+                    background-color: #0e76a8;
+                    color: white;
+                }
+                span{
+                    align-self: center;
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+        }
+        li:hover{
+            transition: all 1s ease;
+        }
+        li:not(:hover){
+            transform: translateX(90px);
+            transition: all 1s ease;
+        }
+        .linkedin{
+            background-color: #0e76a8;
+        }
+        .git{
+            background-color: black;
+        }
+    }
+}

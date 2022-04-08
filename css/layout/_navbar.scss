@@ -6,88 +6,99 @@ nav {
     flex-flow: column;
     align-items: center;
     gap: 40px;
-        width: 40px;
-        height: 100vh;
-        #link{
-            position: relative;
-            top: 10px;
-            left:10px;
-        }
-        #burger {
-            width: 30px;
-            height: 2px;
-            background: white;
-            display: inline-block;
-            position: relative;
+    width: 50px;
+    height: 100vh;
+   
+    
+
+    #burger {
+        width: 30px;
+        height: 2px;
+        background: white;
+        display: inline-block;
+        position: relative;
+    }
+
+    #burger::before,
+    #burger::after {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: white;
+        display: inline-block;
+        position: absolute;
+        transform-origin: center;
+        transition: all 0.3s ease;
+    }
+
+    #burger::before {
+        top: -7px;
+    }
+
+    #burger::after {
+        top: 7px;
+    }
+
+    #burger.open {
+        background: transparent;
+        /* la barre du milieu disparait */
+    }
+
+    /* celles du haut et du bas s'inclinent pour former une croix */
+    #burger.open::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #burger.open::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    ul {
+        display: flex;
+        flex-flow: column;
+        gap: 100px;
+        transform: translateX(-500px);
+        transform-origin: center top;
+        transition: all 1s ease;
+
+        li {
+
+            list-style: none;
+
+            a {
+                color: $couleur_deux;
+                font-size: 50px;
+                text-decoration: none;
+            }
         }
 
-        #burger::before,
-        #burger::after {
-            content: '';
-            width: 30px;
-            height: 2px;
-            background: white;
-            display: inline-block;
-            position: absolute;
-            transform-origin: center;
+        li:hover {
+
+            text-shadow: 5px 5px 3px $couleur_trois;
             transition: all 0.3s ease;
         }
 
-        #burger::before {
-            top: -7px;
-        }
-
-        #burger::after {
-            top: 7px;
-        }
-
-        #burger.open {
-            background: transparent;
-            /* la barre du milieu disparait */
-        }
-
-        /* celles du haut et du bas s'inclinent pour former une croix */
-        #burger.open::before {
-            transform: rotate(45deg);
-            top: 0;
-        }
-
-        #burger.open::after {
-            transform: rotate(-45deg);
-            top: 0;
-        }
-
-        ul{
-            display: flex;
-            flex-flow: column;
-            gap:100px;
-            transform: translateX(-500px);
-            transform-origin: center top;
-            transition: all 1s ease;
-            li{
-                color: $couleur_deux;
-                list-style: none;
-                font-size: 50px;
-            }
-            li:not(:hover){
-                text-shadow: 5px 5px 3px $couleur_trois;
-            }
-            li:hover{
-                transform: translate(5px,5px);
-                transition: all 0.3s ease;
-            }
-        }
-
-        ul.open {
-            transform: translate(0);
-            transition: all 1s ease ;
+        li:not(:hover) {
+            transform: translate(5px, 5px);
+            transition: all 0.3s ease;
         }
     }
 
-    nav.open {
-        width: 300px;
-        z-index: 4;
-        #link{
-            align-self: flex-start;
-        }
+    ul.open {
+        transform: translate(0);
+        transition: all 1s ease;
     }
+}
+
+nav.open {
+    width: 300px;
+    z-index: 4;
+    transition: all 0.5s ease;
+    background-color: rgba(3, 3, 3, 0.9);
+
+    #link {
+        align-self: flex-start;
+    }
+}
