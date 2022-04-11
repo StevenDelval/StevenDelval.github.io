@@ -61,8 +61,11 @@
                 gap: 10px;
             }
         }
-        p{
-            em,strong{
+
+        p {
+
+            em,
+            strong {
                 display: block;
             }
         }
@@ -92,9 +95,10 @@
                     display: flex;
                     flex-flow: column;
                     gap: 10px;
-                    dd ul{
+
+                    dd ul {
                         list-style: none;
-                        
+
                     }
                 }
 
@@ -126,7 +130,7 @@
                     display: flex;
                     flex-flow: column;
                     gap: 10px;
-                    
+
                 }
 
                 .droit {
@@ -164,6 +168,16 @@
         }
     }
 
+}
+
+@media screen and (max-width:700px) {
+    #pagecv {
+        nav {
+            #link {
+                top: 0;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:500px) {
