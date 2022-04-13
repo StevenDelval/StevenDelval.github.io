@@ -33,6 +33,9 @@
                     
                     color: black ;
                 }
+                .fa-envelope{
+                    color: white;
+                }
 
                 .fa-linkedin-in {
                     color: white;
@@ -51,11 +54,15 @@
             transform: translateX(90px);
             transition: all 1s ease;
         }
-        .linkedin{
-            background-color: #0e76a8;
+        .mail{
+            background-color: black;
             a span{
                 color: white;
             }
+        }
+        .linkedin{
+            background-color: #0e76a8;
+            
         }
         .git{
             background-color: white;
