@@ -410,7 +410,6 @@ nav ul {
   height: 80vh;
   gap: 100px;
   transform: translateX(-500px);
-  transform-origin: center top;
   transition: all 1s ease;
 }
 nav ul li {
@@ -427,7 +426,7 @@ nav ul li:hover {
 }
 nav ul li:not(:hover) {
   transform: translate(5px, 5px);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-out;
 }
 nav ul.open {
   transform: translate(0);

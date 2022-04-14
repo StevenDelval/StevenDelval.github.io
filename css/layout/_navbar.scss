@@ -76,7 +76,6 @@ nav {
         height: 80vh;
         gap: 100px;
         transform: translateX(-500px);
-        transform-origin: center top;
         transition: all 1s ease;
 
         li {
@@ -98,7 +97,7 @@ nav {
 
         li:not(:hover) {
             transform: translate(5px, 5px);
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-out;
         }
     }
 
