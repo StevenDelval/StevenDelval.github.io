@@ -8,5 +8,3 @@ portfolio.addEventListener("click", (e) => {
     e.target.classList.add("active")
   }
 });
-
-
