@@ -86,7 +86,7 @@
     .active .text-container {
         visibility: visible;
         transform: translateY(0px);
-        transition: all 1s cubic-bezier(.19,-0.05,.23,.53);
+        transition: all 1.1s cubic-bezier(.19,-0.05,.23,.53);
         opacity: 1;
     }
 @media screen and (max-width:1120px) {

@@ -1,6 +1,7 @@
 const cloud=document.querySelector('.cloud');
-let rest=document.getElementsByClassName('fa-snowflake');
-setInterval(snowfall,50);
+timeSnow= Math.max(Math.floor(Math.random()*75),10);
+
+setInterval(snowfall,timeSnow);
 
 
 function snowfall(){
@@ -19,5 +20,3 @@ function snowfall(){
         snowflake.remove();
     }, a*1000);
 }
-
-
