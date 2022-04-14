@@ -12,6 +12,15 @@ nav {
     #link {
         position: absolute;
         top: 10px;
+        left:10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        
+        animation: spin 2s forwards infinite ;
+        transform-origin: center;
+        
     }
    
     
@@ -106,6 +115,27 @@ nav.open {
     background-color: rgba(3, 3, 3, 0.9);
 
     #link {
-        align-self: flex-start ;
+        
+        animation: halfspin 2s forwards infinite ;
+        transform-origin: center;
+    }
+}
+
+@keyframes halfspin {
+    from {
+        transform: rotateZ(0) ;
+        
+    }
+    to{
+        transform: rotateZ(90deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotateZ(0) ;
+        
+    }
+    to{
+        transform: rotateZ(180deg);
     }
 }

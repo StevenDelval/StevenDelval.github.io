@@ -358,6 +358,14 @@ nav {
 nav #link {
   position: absolute;
   top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  -webkit-animation: spin 2s forwards infinite;
+          animation: spin 2s forwards infinite;
+  transform-origin: center;
 }
 nav #burger {
   width: 30px;
@@ -433,9 +441,44 @@ nav.open {
   background-color: rgba(3, 3, 3, 0.9);
 }
 nav.open #link {
-  align-self: flex-start;
+  -webkit-animation: halfspin 2s forwards infinite;
+          animation: halfspin 2s forwards infinite;
+  transform-origin: center;
 }
 
+@-webkit-keyframes halfspin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(90deg);
+  }
+}
+
+@keyframes halfspin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(90deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
 .cloud {
   position: absolute;
   top: 0;
