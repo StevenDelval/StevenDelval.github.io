@@ -22,6 +22,11 @@ nav {
         transform-origin: center;
         
     }
+    #link:hover {
+    animation: spin 2s forwards infinite ;
+        transform-origin: center;
+        
+    }
    
     
 
@@ -113,7 +118,7 @@ nav.open {
     transition: all 0.5s ease;
     background-color: rgba(3, 3, 3, 0.9);
 
-    #link {
+    #link:hover {
         
         animation: halfspin 2s forwards infinite ;
         transform-origin: center;
