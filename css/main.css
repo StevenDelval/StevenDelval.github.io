@@ -363,9 +363,6 @@ nav #link {
   justify-content: center;
   align-items: center;
   height: 30px;
-  -webkit-animation: spin 2s forwards infinite;
-          animation: spin 2s forwards infinite;
-  transform-origin: center;
 }
 nav #link:hover {
   -webkit-animation: spin 2s forwards infinite;

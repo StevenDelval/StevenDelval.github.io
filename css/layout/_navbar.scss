@@ -18,8 +18,6 @@ nav {
         align-items: center;
         height: 30px;
         
-        animation: spin 2s forwards infinite ;
-        transform-origin: center;
         
     }
     #link:hover {
@@ -119,7 +117,6 @@ nav.open {
     background-color: rgba(3, 3, 3, 0.9);
 
     #link:hover {
-        
         animation: halfspin 2s forwards infinite ;
         transform-origin: center;
     }
