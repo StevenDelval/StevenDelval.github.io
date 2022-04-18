@@ -1,5 +1,5 @@
 const cloud=document.querySelector('.cloud');
-timeSnow= Math.max(Math.floor(Math.random()*75),10);
+timeSnow= Math.max(Math.floor(Math.random()*100),10);
 
 setInterval(snowfall,timeSnow);
 
