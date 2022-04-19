@@ -521,7 +521,7 @@ nav.open #link:hover {
   padding: 30px;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 5px;
+  border-radius: 15px;
   z-index: 3;
 }
 .presentation h2 {
