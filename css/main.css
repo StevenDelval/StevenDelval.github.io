@@ -314,139 +314,33 @@ template {
 }
 
 nav {
+  background-color: #6D071A;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  gap: 100px;
-  width: 50px;
-  height: 100vh;
-  /* celles du haut et du bas s'inclinent pour former une croix */
-}
-nav #link {
-  position: absolute;
-  top: 10px;
-  left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
+  height: 4rem;
 }
-nav #link:hover {
-  -webkit-animation: spin 2s forwards infinite;
-          animation: spin 2s forwards infinite;
-  transform-origin: center;
-}
-nav #burger {
-  width: 30px;
-  height: 2px;
-  background: white;
-  display: inline-block;
-  position: relative;
-}
-nav #burger::before,
-nav #burger::after {
-  content: "";
-  width: 30px;
-  height: 2px;
-  background: white;
-  display: inline-block;
-  position: absolute;
-  transform-origin: center;
-  transition: all 0.3s ease;
-}
-nav #burger::before {
-  top: -7px;
-}
-nav #burger::after {
-  top: 7px;
-}
-nav #burger.open {
-  background: transparent;
-  /* la barre du milieu disparait */
-}
-nav #burger.open::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-nav #burger.open::after {
-  transform: rotate(-45deg);
-  top: 0;
-}
-nav ul {
-  margin-top: 50px;
-  display: flex;
-  flex-flow: column;
-  height: 80vh;
-  gap: 100px;
-  transform: translateX(-500px);
-  transition: all 1s ease;
-}
-nav ul li {
-  list-style: none;
-}
-nav ul li a {
-  color: #ffffff;
-  font-size: 50px;
+nav h2 a {
   text-decoration: none;
-}
-nav ul li:hover {
-  transition: all 0.3s ease;
-}
-nav ul li:not(:hover) {
-  transform: translate(5px, 5px);
-  transition: all 0.3s ease-out;
-}
-nav ul.open {
-  transform: translate(0);
-  transition: all 1s ease;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 400;
 }
 
-nav.open {
-  width: 300px;
-  z-index: 4;
-  transition: all 0.5s ease;
-  background-color: rgba(3, 3, 3, 0.9);
-}
-nav.open #link:hover {
-  -webkit-animation: halfspin 2s forwards infinite;
-          animation: halfspin 2s forwards infinite;
-  transform-origin: center;
-}
-
-@-webkit-keyframes halfspin {
-  from {
-    transform: rotateZ(0);
-  }
-  to {
-    transform: rotateZ(90deg);
+@media (min-width: 640px) {
+  nav {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
-
-@keyframes halfspin {
-  from {
-    transform: rotateZ(0);
-  }
-  to {
-    transform: rotateZ(90deg);
-  }
-}
-@-webkit-keyframes spin {
-  from {
-    transform: rotateZ(0);
-  }
-  to {
-    transform: rotateZ(180deg);
-  }
-}
-@keyframes spin {
-  from {
-    transform: rotateZ(0);
-  }
-  to {
-    transform: rotateZ(180deg);
+@media (min-width: 1024px) {
+  nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 .cloud {

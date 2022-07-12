@@ -1,140 +1,40 @@
 nav {
+    background-color: #6D071A;
+    width: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
+    top:0;
     display: flex;
-    flex-flow: column;
+    justify-content: center;
     align-items: center;
-    gap: 100px;
-    width: 50px;
-    height: 100vh;
+    height: 4rem;
+    h2 {
 
-    #link {
-        position: absolute;
-        top: 10px;
-        left:10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 30px;
         
         
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.25rem; 
+            line-height: 1.75rem;
+            font-weight: 400;
+        }
     }
-    #link:hover {
-    animation: spin 2s forwards infinite ;
-        transform-origin: center;
-        
-    }
-   
+}
+@media (min-width: 640px) {
     
-
-    #burger {
-        width: 30px;
-        height: 2px;
-        background: white;
-        display: inline-block;
-        position: relative;
+    nav {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
-
-    #burger::before,
-    #burger::after {
-        content: '';
-        width: 30px;
-        height: 2px;
-        background: white;
-        display: inline-block;
-        position: absolute;
-        transform-origin: center;
-        transition: all 0.3s ease;
-    }
-
-    #burger::before {
-        top: -7px;
-    }
-
-    #burger::after {
-        top: 7px;
-    }
-
-    #burger.open {
-        background: transparent;
-        /* la barre du milieu disparait */
-    }
-
-    /* celles du haut et du bas s'inclinent pour former une croix */
-    #burger.open::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    #burger.open::after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-
-    ul {
-        margin-top: 50px;
-        display: flex;
-        flex-flow: column;
-        height: 80vh;
-        gap: 100px;
-        transform: translateX(-500px);
-        transition: all 1s ease;
-
-        li {
-
-            list-style: none;
-
-            a {
-                color: $couleur_deux;
-                font-size: 50px;
-                text-decoration: none;
-            }
-        }
-
-        li:hover {
-            transition: all 0.3s ease;
-        }
-
-        li:not(:hover) {
-            transform: translate(5px, 5px);
-            transition: all 0.3s ease-out;
-        }
-    }
-
-    ul.open {
-        transform: translate(0);
-        transition: all 1s ease;
-    }
-}
-
-nav.open {
-    width: 300px;
-    z-index: 4;
-    transition: all 0.5s ease;
-    background-color: rgba(3, 3, 3, 0.9);
-
-    #link:hover {
-        animation: halfspin 2s forwards infinite ;
-        transform-origin: center;
-    }
-}
-
-@keyframes halfspin {
-    from {
-        transform: rotateZ(0) ;
-        
-    }
-    to{
-        transform: rotateZ(90deg);
-    }
-}
-@keyframes spin {
-    from {
-        transform: rotateZ(0) ;
-        
-    }
-    to{
-        transform: rotateZ(180deg);
-    }
-}
+  
+    
+    
+  }
+  @media (min-width: 1024px) {
+    
+    
+  
+    nav {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }}
